@@ -8,6 +8,63 @@
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .navbar-item.dropdown {
+      position: relative;
+    }
+
+    .navbar-item .dropdown-content {
+      display: none;
+      position: absolute;
+      background: linear-gradient(180deg, #333, #444); /* Gradient to match the grey color */
+      color: #fff; /* White text */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .navbar-item .dropdown-content a {
+      color: #fff; /* White text */
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar-item .dropdown-content a:hover {
+      background-color: #ffdd57; /* Use the same yellowish color as in your code */
+      color: #000;
+    }
+
+    .navbar-item.dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar-link {
+      color: #c0c0c0; /* Set default color to greyish for all links */
+    }
+
+    .navbar-link:hover, .navbar-link:focus {
+      color: #ffdd57; /* Apply the same yellowish color for hover */
+    }
+
+    .navbar-link.active {
+      color: #ffdd57; /* Apply the same yellowish color for active state */
+    }
+
+    /* Specific styles for Portfolio link */
+    .navbar-item.dropdown:hover > .navbar-link {
+      color: #ffdd57; /* Yellowish color for hover */
+    }
+
+    .navbar-item.dropdown:focus > .navbar-link {
+      color: #ffdd57; /* Yellowish color for focus */
+    }
+
+    .navbar-item.dropdown:not(:hover):not(:focus) > .navbar-link {
+      color: #c0c0c0; /* Grey color like other links */
+    }
+  </style>
 </head>
 
 <body>
@@ -71,7 +128,13 @@
         <ul class="navbar-list">
           <li class="navbar-item"><a href="#" class="navbar-link active">About</a></li>
           <li class="navbar-item"><a href="https://docs.google.com/document/d/1U1Cu67ZVnpyYFAZ9nhoRdo3zt4ZEU7HFj7BuDy8g2_c/edit?usp=sharing" class="navbar-link">Resume</a></li>
-          <li class="navbar-item"><a href="https://www.figma.com/design/JnhDDT66wf4yaQ8bIyOXqj/Portfolio?node-id=457-30&t=SUwEpS5w6g33OFNh-1" class="navbar-link">Portfolio</a></li>
+          <li class="navbar-item dropdown">
+            <a href="#" class="navbar-link">Portfolio</a>
+            <ul class="dropdown-content">
+              <li><a href="https://www.figma.com/design/JnhDDT66wf4yaQ8bIyOXqj/Portfolio?node-id=457-30&t=SUwEpS5w6g33OFNh-1" class="dropdown-link">Figma</a></li>
+              <li><a href="https://github.com/aryamang2004/" class="dropdown-link">GitHub</a></li>
+            </ul>
+          </li>
           <li class="navbar-item"><a href="https://aryamang2004.medium.com/" class="navbar-link">Blog</a></li>
           <li class="navbar-item"><a href="#" class="navbar-link">Contact</a></li>
         </ul>
@@ -81,7 +144,8 @@
         <header><h2 class="h2 article-title">About me</h2></header>
         <section class="about-text">
           <p>I'm an aspiring Software Engineer & Product Designer from California, specializing in web development and graphic design. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
-          <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add a personal touch to your product and make sure that it is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.</p>
+          <p>I'm also particularly passionate about AI engineering, with a strong interest in OpenCV, and have been building foundational projects using this technology.</p>
+          <p>My job is to build websites that are functional, user-friendly, and attractive. Moreover, I integrate AI-driven features and leverage advanced algorithms to ensure each product is not only eye-catching but also highly efficient. My aim is to convey your message and identity in the most innovative and creative way possible.</p>
         </section>
         <section class="service">
           <h3 class="h3 service-title">What I'm doing</h3>
